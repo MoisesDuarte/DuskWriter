@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Wendy+One&display=swap');
+
+:root {
+  --color-primary: #FF6464;
+  --color-secondary: #FFAA64;
+  --color-tertiary: #FFF5A5;
+  --text-black: #333333;
+  --text-white: #FFFFFF;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-tertiary);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}

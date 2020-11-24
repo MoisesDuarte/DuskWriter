@@ -66,7 +66,6 @@ export default {
 main {
   position: relative;
   height: 100%;
-  padding: 1.2rem;
 }
 
 img.bottom-left {
@@ -82,6 +81,7 @@ header {
   font-family: 'Wendy One', sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
+  padding: 1rem;
 }
 
 header > span {
@@ -90,6 +90,8 @@ header > span {
 
 section {
   border-bottom: 1px solid var(--color-secondary);
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding-bottom: 1rem;
 }
 

@@ -9,7 +9,7 @@
         your ideas, while the light of the day<br>
         fades away.
       </p>
-      <button>Let's Write!</button>
+      <button @click="goToStories">Let's Write!</button>
     </section>
   </main>
 </template>
@@ -17,9 +17,11 @@
 <script>
 export default {
   name: 'Home',
-  components: {
-    //
-  }
+  methods: {
+    goToStories() {
+      this.$router.push({ name: 'Stories' });
+    },
+  },
 }
 </script>
 
@@ -40,9 +42,7 @@ section {
 
 section > h1 {
   color: var(--color-primary);
-  font-family: 'Wendy One', sans-serif;
   font-size: 1.5rem;
-  font-weight: 500;
   line-height: 1;
   margin-bottom: 0;
 }

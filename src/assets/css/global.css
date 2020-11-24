@@ -23,3 +23,19 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
+
+h1 {
+  color: var(--color-primary);
+  font-family: 'Wendy One', sans-serif;
+  font-weight: 500;
+}
+
+button.transparent {
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  font-family: 'Wendy One', sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  padding: 0;
+}

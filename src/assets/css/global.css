@@ -4,6 +4,7 @@
   --color-primary: #FF6464;
   --color-secondary: #FFAA64;
   --color-tertiary: #FFF5A5;
+  --color-accent: #FF8264;
   --text-black: #333333;
   --text-white: #FFFFFF;
 }
@@ -38,4 +39,36 @@ button.transparent {
   font-weight: 500;
   font-size: 1.125rem;
   padding: 0;
+}
+
+input.transparent {
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  text-align: center;
+  font-family: 'Wendy One', sans-serif;
+  font-size: 2.25rem;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+}
+
+textarea.transparent {
+  border: none;
+  background: none;
+  color: var(--text-black);
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+textarea.transparent:focus {
+  outline: none;
 }

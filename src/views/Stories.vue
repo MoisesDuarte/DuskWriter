@@ -8,9 +8,7 @@
     <StoryList :stories="stories" />
 
     <p class="no-more">This is all for now</p>
-    
     <img class="bottom-left" src="@/assets/svg/sunset_illustration.svg" alt="">
-
   </main>
 </template>
 
@@ -26,7 +24,7 @@ export default {
     return {
       stories: [
         { 
-          id: 0,
+          id: 1,
           title: 'Story One',
           date: '12/05/2020',
           words: 2567,
@@ -34,7 +32,7 @@ export default {
           reading_time: '23 minutes',
         },
         { 
-          id: 1,
+          id: 2,
           title: 'Story Two',
           date: '12/07/2018',
           words: 5454,
@@ -42,7 +40,7 @@ export default {
           reading_time: '32 minutes',
         },
         { 
-          id: 2,
+          id: 3,
           title: 'Story Three',
           date: '12/05/2020',
           words: 6545,

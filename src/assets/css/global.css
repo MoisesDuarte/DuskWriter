@@ -52,6 +52,10 @@ input.transparent {
   width: 100%;
 }
 
+input.transparent:focus {
+  outline: none;
+}
+
 textarea.transparent {
   border: none;
   background: none;

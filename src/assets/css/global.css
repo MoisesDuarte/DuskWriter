@@ -9,12 +9,14 @@
   --text-white: #FFFFFF;
 }
 
+/* * Overrides */
 html, body {
   height: 100%;
 }
 
 html {
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,22 +27,14 @@ body {
   font-weight: 700;
 }
 
+/* * Typography */
 h1 {
   color: var(--color-primary);
   font-family: 'Wendy One', sans-serif;
   font-weight: 500;
 }
 
-button.transparent {
-  border: none;
-  background: none;
-  color: var(--color-secondary);
-  font-family: 'Wendy One', sans-serif;
-  font-weight: 500;
-  font-size: 1.125rem;
-  padding: 0;
-}
-
+/* * Inputs */
 input.transparent {
   border: none;
   background: none;
@@ -74,5 +68,20 @@ textarea.transparent {
 }
 
 textarea.transparent:focus {
+  outline: none;
+}
+
+/* * Buttons */
+button.transparent {
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  font-family: 'Wendy One', sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  padding: 0;
+}
+
+button.transparent:focus {
   outline: none;
 }

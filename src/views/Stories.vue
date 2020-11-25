@@ -2,7 +2,7 @@
   <main>
     <header>
       <span>DuskWriter</span>
-      <button class="transparent">+ Add Story</button>
+      <button class="transparent" @click="addStory">+ Add Story</button>
     </header>
 
     <StoryList :stories="stories" />
@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import { Plugins } from '@capacitor/core';
+const { Storage } = Plugins;
 import StoryList from '@/components/StoryList';
 
 export default {
@@ -22,33 +24,33 @@ export default {
   },
   data() {
     return {
-      stories: [
-        { 
-          id: 1,
-          title: 'Story One',
-          date: '12/05/2020',
-          words: 2567,
-          characters: 4614,
-          reading_time: '23 minutes',
-        },
-        { 
-          id: 2,
-          title: 'Story Two',
-          date: '12/07/2018',
-          words: 5454,
-          characters: 6871,
-          reading_time: '32 minutes',
-        },
-        { 
-          id: 3,
-          title: 'Story Three',
-          date: '12/05/2020',
-          words: 6545,
-          characters: 24554,
-          reading_time: '1 hour',
-        },
-      ],
+      stories: [],
     }
+  },
+  methods: {
+    async addStory() {
+      const newStory = {
+        title: 'Title',
+        date: Date.now(),
+        words: 0,
+        characters: 0,
+        reading_time: '0 minutes',
+      };
+
+      this.stories.push(newStory);
+
+      await Storage.set({
+        key: 'stories',
+        value: JSON.stringify(this.stories)
+      });
+    },
+    async getStories() {
+      const storage = await Storage.get({ key: 'stories' });  
+      this.stories = storage.value !== null ? JSON.parse(storage.value) : [];
+    }
+  },
+  mounted() {
+    this.getStories();
   },
 }
 </script>

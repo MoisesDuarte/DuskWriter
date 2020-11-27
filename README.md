@@ -12,7 +12,8 @@
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### TODO
-- [ ] Add Capacitor to Project
+- [x] Add Capacitor to Project
+- [ ] Add Async Storage Persistence
 - [ ] Use Capacitor FileSystem to save and read text files
 
 ### Resources

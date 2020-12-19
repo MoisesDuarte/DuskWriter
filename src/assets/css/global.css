@@ -28,7 +28,7 @@ body {
 }
 
 /* * Typography */
-h1 {
+h1, h2, h3, h4 {
   color: var(--color-primary);
   font-family: 'Wendy One', sans-serif;
   font-weight: 500;
@@ -48,6 +48,10 @@ input.transparent {
 
 input.transparent:focus {
   outline: none;
+}
+
+input.font-small {
+  font-size: 1.5rem;
 }
 
 textarea.transparent {
@@ -80,8 +84,21 @@ button.transparent {
   font-weight: 500;
   font-size: 1.125rem;
   padding: 0;
+  cursor: pointer;
 }
 
 button.transparent:focus {
   outline: none;
+}
+
+button.filled {
+  background: var(--color-secondary);
+  color: var(--text-white);
+  border: 1px solid var(--color-secondary);
+  border-radius: 6px;
+  width: 256px;
+  height: 48px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
 }

@@ -2,7 +2,7 @@
   <main>
     <header>
       <span>DuskWriter</span>
-      <button class="transparent" @click="addStory">+ Add Story</button>
+      <button class="transparent" @click="addStory()">+ Add Story</button>
     </header>
 
     <StoryList :stories="stories" />
@@ -29,9 +29,13 @@ export default {
   },
   methods: {
     async addStory() {
+      const today = new Date();
+      const formattedDate = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+
       const newStory = {
         title: 'Title',
-        date: Date.now(),
+        date: formattedDate,
+        body: '',
         words: 0,
         characters: 0,
         reading_time: '0 minutes',

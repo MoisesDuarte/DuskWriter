@@ -9,7 +9,7 @@
         your ideas, while the light of the day<br>
         fades away.
       </p>
-      <button @click="goToStories">Let's Write!</button>
+      <button class="filled" @click="goToStories">Let's Write!</button>
     </section>
   </main>
 </template>
@@ -57,17 +57,5 @@ section > p {
 b {
   color: var(--color-primary);
   font-weight: 900;
-}
-
-section > button {
-  background: var(--color-secondary);
-  color: var(--text-white);
-  border: 1px solid var(--color-secondary);
-  border-radius: 6px;
-  width: 256px;
-  height: 48px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 1.125rem;
 }
 </style>
